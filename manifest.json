@@ -1,0 +1,23 @@
+{
+    "name":"Tinder Unblur",
+    "version":"1.0",
+    "manifest_version":2,
+    "background": {
+        "scripts":["src/background.js"]
+      },
+    "content_scripts": [
+        {
+            "matches":["https://tinder.com/*"],
+            "js":["src/content.js"],
+            "run_at": "document_end"
+        }
+    ], 
+    "browser_action": {
+        "default_title": "Tinder Unblur",
+        "default_icon":"assets/tinder.png"
+    },
+    "permissions": [
+        "tabs",
+        "webNavigation"
+    ]
+}
